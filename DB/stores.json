@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6236827c46843b765d65e1ce"
+  },
+  "name": "PS Narvarte",
+  "address": "Uxmal # 240",
+  "email": "psnarvarte@petspa.com.mx",
+  "phone": 4455668800,
+  "location": "19.392829010422073, -99.15453071614867",
+  "createdAt": {
+    "$date": "2022-03-20T01:25:16.905Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T01:25:16.905Z"
+  }
+},{
+  "_id": {
+    "$oid": "62368a9c91e5c4c0b50a5be4"
+  },
+  "name": "PS Sur",
+  "address": "Paseo de los jardines # 50",
+  "email": "pssur@petspa.com.mx",
+  "phone": 4455668800,
+  "location": "19.349508681994603, -99.12615667363677",
+  "createdAt": {
+    "$date": "2022-03-20T01:59:56.132Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T01:59:56.132Z"
+  }
+}]

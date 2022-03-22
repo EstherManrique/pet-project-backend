@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "623684c7c361819c957a87f2"
+  },
+  "name": "Dianyela Maldonado de Ortegon",
+  "email": "dianyela.y.maldonado@gmail.com",
+  "password": "$2a$10$v.NqLEcGRwRfbnj64.bS.uKWSd2kBgcnEuYt5B/iV.7O7qL33bBui",
+  "roles": [
+    {
+      "$oid": "623681a646843b765d65e1ae"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-03-20T01:35:03.821Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T19:52:59.910Z"
+  }
+},{
+  "_id": {
+    "$oid": "62369f99ce459cad94e651db"
+  },
+  "name": "Admin",
+  "email": "admin@petspa.com.mx",
+  "password": "$2a$10$fqE1/WYhclNDaBhOMzwjF.BE35/OKlMnv8eBUp7v6ryt42WrGxpEW",
+  "roles": [
+    {
+      "$oid": "6236819646843b765d65e1a6"
+    }
+  ],
+  "storeId": {
+    "$oid": "6236827c46843b765d65e1ce"
+  },
+  "createdAt": {
+    "$date": "2022-03-20T03:29:29.972Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T03:29:29.972Z"
+  }
+},{
+  "_id": {
+    "$oid": "6236d4704ea0d26b4febb74f"
+  },
+  "name": "Edith Romero",
+  "email": "edithA@gmail.com",
+  "password": "$2a$10$0gH0Wi8itlWaXCVtB5IF0erhD9M2eXTnW3H4khPPGtbjmOkM.ZWK6",
+  "roles": [
+    {
+      "$oid": "623681a646843b765d65e1ae"
+    }
+  ],
+  "createdAt": {
+    "$date": "2022-03-20T07:14:56.904Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T07:14:56.904Z"
+  }
+},{
+  "_id": {
+    "$oid": "6237873d19d164fde9d39eb5"
+  },
+  "name": "Laura Moreno",
+  "email": "lauraM@petspa.com.mx",
+  "password": "$2a$10$YNDFpwDm/kypJpNokgDC4.UviwLMPyUyBn/lFN1WCYUUrwWuFpQly",
+  "roles": [
+    {
+      "$oid": "623681a046843b765d65e1ab"
+    }
+  ],
+  "storeId": {
+    "$oid": "62368a9c91e5c4c0b50a5be4"
+  },
+  "createdAt": {
+    "$date": "2022-03-20T19:57:49.454Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T19:57:49.454Z"
+  }
+}]

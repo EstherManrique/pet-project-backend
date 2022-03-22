@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "62366c28ed4f39e18104aef2"
+  },
+  "name": "Adopción",
+  "description": "Servicio de Adopción",
+  "price": 100,
+  "createdAt": {
+    "$date": "2022-03-19T23:50:00.444Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T06:44:25.159Z"
+  }
+},{
+  "_id": {
+    "$oid": "62369fb0ce459cad94e651e0"
+  },
+  "name": "Vacunación",
+  "description": "Servicio de vacunación",
+  "price": 260,
+  "createdAt": {
+    "$date": "2022-03-20T03:29:52.366Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-21T01:22:02.133Z"
+  }
+},{
+  "_id": {
+    "$oid": "6236b4543dde97824c56b247"
+  },
+  "name": "Hospedaje",
+  "description": "Hospeda a tu mascota si te vas de viaje",
+  "price": 330,
+  "createdAt": {
+    "$date": "2022-03-20T04:57:56.470Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T06:42:30.380Z"
+  }
+},{
+  "_id": {
+    "$oid": "6236b6253dde97824c56b24b"
+  },
+  "name": "Desparacitación",
+  "description": "Desparasita a tu mascota",
+  "price": 120,
+  "createdAt": {
+    "$date": "2022-03-20T05:05:41.624Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-20T05:05:41.624Z"
+  }
+},{
+  "_id": {
+    "$oid": "6236b6733dde97824c56b24f"
+  },
+  "name": "Grooming",
+  "description": "Pon bella a tu mascota",
+  "price": 200,
+  "createdAt": {
+    "$date": "2022-03-20T05:06:59.554Z"
+  },
+  "updatedAt": {
+    "$date": "2022-03-21T01:04:42.721Z"
+  }
+}]

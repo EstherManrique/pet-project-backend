@@ -1,0 +1,873 @@
+{
+	"info": {
+		"_postman_id": "242bbbe9-5de2-48a7-a9aa-9e92f5d3bcee",
+		"name": "pet_project_1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GET_Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY5Zjk5Y2U0NTljYWQ5NGU2NTFkYiIsImlhdCI6MTY0Nzc0Njk2OSwiZXhwIjoxNjUwMzM4OTY5fQ._TYvio41wfWNMrroKXi0ohpsI-ZsdOoLkWYV0Kbaxw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "lalo2@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Lalo123",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Laura Moreno\",\r\n    \"userName\": \"lauraM\",\r\n    \"email\": \"lauraM@petspa.com.mx\",\r\n    \"password\": \"lauraM_1$\",\r\n    \"roles\": [\r\n        \"Manager\"\r\n    ],\r\n    \"storeId\": \"62368a9c91e5c4c0b50a5be4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY5Zjk5Y2U0NTljYWQ5NGU2NTFkYiIsImlhdCI6MTY0Nzc0Njk2OSwiZXhwIjoxNjUwMzM4OTY5fQ._TYvio41wfWNMrroKXi0ohpsI-ZsdOoLkWYV0Kbaxw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dianyela Maldonado de Ortegon\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/623684c7c361819c957a87f2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"623684c7c361819c957a87f2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY5Zjk5Y2U0NTljYWQ5NGU2NTFkYiIsImlhdCI6MTY0Nzc0Njk2OSwiZXhwIjoxNjUwMzM4OTY5fQ._TYvio41wfWNMrroKXi0ohpsI-ZsdOoLkWYV0Kbaxw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/users/6236828f46843b765d65e1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"6236828f46843b765d65e1d2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "GET Services",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY5Zjk5Y2U0NTljYWQ5NGU2NTFkYiIsImlhdCI6MTY0Nzc0Njk2OSwiZXhwIjoxNjUwMzM4OTY5fQ._TYvio41wfWNMrroKXi0ohpsI-ZsdOoLkWYV0Kbaxw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vacunación Covid\",\r\n    \"description\": \"Servicio de vacunación Covid\",\r\n    \"price\": 350\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/services",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"services"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Baño y corte de pelo",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Medico Veterinario uuuu",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "300",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/services/62366c28ed4f39e18104aef2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"services",
+								"62366c28ed4f39e18104aef2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_Service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY5Zjk5Y2U0NTljYWQ5NGU2NTFkYiIsImlhdCI6MTY0Nzc0Njk2OSwiZXhwIjoxNjUwMzM4OTY5fQ._TYvio41wfWNMrroKXi0ohpsI-ZsdOoLkWYV0Kbaxw8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyNDRiN2FhNWQ4ZjQ3NTUzOTg3ZGZmIn0sImlhdCI6MTY0NjU0NTc4NiwiZXhwIjoxNjQ2NTgxNzg2fQ.E3IBSUCEOFOF585z5zihPYf3GYex7nBzBadV2ukTIG0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/services/6237814fdf4085966b828af8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"services",
+								"6237814fdf4085966b828af8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "GET_Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_Stores",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"PS Sur\",\r\n    \"address\": \"Paseo de los jardines # 50\",\r\n    \"email\": \"pssur@petspa.com.mx\",\r\n    \"phone\": 4455668800,\r\n    \"location\": \"19.349508681994603, -99.12615667363677\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "PS Norte",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "Gustavo Baz # 600",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "psnorte1@petspa.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "5555889999",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "location",
+									"value": "19.416876803718104, -99.16652488809709",
+									"type": "default",
+									"disabled": true
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/stores/62366c7fed4f39e18104aef8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stores",
+								"62366c7fed4f39e18104aef8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/stores/62366c7fed4f39e18104aef8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"stores",
+								"62366c7fed4f39e18104aef8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservations",
+			"item": [
+				{
+					"name": "GET_reservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/reservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET_reservations_filtered",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/reservations/622023114d486c454f796a8a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reservations",
+								"622023114d486c454f796a8a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_reservation",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"petName\": \"Chato\",\r\n    \"date\": \"2022-03-15T12:00:00.000Z\",\r\n    \"status\": \"pending\",\r\n    \"clientPhone\": 1122334488,\r\n    \"clientId\": \"62254b04794ef327d990b57f\",\r\n    \"storeId\": \"622023984d486c454f796a8d\",\r\n    \"serviceId\": \"622025de4d486c454f796a9b\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/reservations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UPDATE_reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"petName\": \"Chatito\",\r\n    \"serviceId\": \"62244d75a5d8f47553987e1b\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/reservations/62255ba85ac8c4dba61c3534",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reservations",
+								"62255ba85ac8c4dba61c3534"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/reservations/6221244bf2a4884e910e470f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"reservations",
+								"6221244bf2a4884e910e470f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Roles",
+			"item": [
+				{
+					"name": "GET_role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyNDRiN2FhNWQ4ZjQ3NTUzOTg3ZGZmIn0sImlhdCI6MTY0NjYwMDQ1NywiZXhwIjoxNjQ2NjM2NDU3fQ.tqclWivONB8Iy7vtDOIoYfHKj6wVG54uSHt01cmGoBM",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/api/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST_role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjIyNDNiMGUxMmQ2YTg0NzlhNmMyOGQ1In0sImlhdCI6MTY0NjU0MTU4MiwiZXhwIjoxNjQ2NTc3NTgyfQ.NjM-MKUAY43LROfOzpae4c_WViKd_XhsYd5Ub6WIoP4",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "xxxx",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/roles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT_role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Administrator",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/roles/6236819646843b765d65e1a6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"roles",
+								"6236819646843b765d65e1a6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE_role",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzY4MjhmNDY4NDNiNzY1ZDY1ZTFkMiIsImlhdCI6MTY0NzczOTUzNSwiZXhwIjoxNjUwMzMxNTM1fQ.nYbEjikuau4ZorRRZG8atqPLZZepqy1wSM5hu6_nAxE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/roles/623681de46843b765d65e1bd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"roles",
+								"623681de46843b765d65e1bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "TOKEN",
+			"value": "eyJpZCI6IjYyMzUxNDgxNGI5ZWU2MGQ3OTFjYTNhNCIsImlhdCI6MTY0NzcyNDI2MiwiZXhwIjoxNjUwMzE2MjYyfQ"
+		},
+		{
+			"key": "API_TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMzUxNDgxNGI5ZWU2MGQ3OTFjYTNhNCIsImlhdCI6MTY0NzcyNDI2MiwiZXhwIjoxNjUwMzE2MjYyfQ.cNZra-L3Ym4psGxRn3slGxODiNN15iL43ASmhkalepU"
+		}
+	]
+}
