@@ -8,7 +8,6 @@ const accessControl = require('../helpers/accessControl');
 // @access  Private
 const getRoles = asyncHandler(async (req, res) => {
   const allowedRoles = await helpers.getMongoRoles(accessControl.permissions.role.get);
-  console.log(helpers.compareRoles(allowedRoles, req.user.roleId));
   if (helpers.compareRoles(allowedRoles, req.user.roleId)) {
     const roles = await Role.find({});
     res.status(200).json({ message: "Get Roles", roles });
