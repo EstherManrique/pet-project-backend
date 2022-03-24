@@ -1,3 +1,4 @@
+// Access definition
 const permissions = {
   stores: {
     get: [],
@@ -12,13 +13,13 @@ const permissions = {
     delete: ['Administrator']
   },
   reservations: {
-    get: ['Administrator', 'Manager'],
+    get: ['Manager'],
     post: [],
-    put: ['Administrator', 'Manager'],
-    delete: ['Administrator', 'Manager']
+    put: ['Manager'],
+    delete: ['Manager']
   },
   users: {
-    get: ['Administrator', 'Manager'],
+    get: ['Administrator'],
     post: ['Administrator'],
     put: ['Administrator'],
     delete: ['Administrator']
