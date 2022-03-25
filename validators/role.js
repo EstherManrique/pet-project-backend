@@ -6,8 +6,9 @@ const validateSave = [
     .exists()
     .not()
     .isEmpty()
+      .withMessage("Role name should not be empty.")
     .isString()
-    .withMessage('Error role name'),
+      .withMessage("Invalid role name."),
     (request, response, next) => {
     validateResult(request, response, next);
   },
@@ -16,14 +17,16 @@ const validateSave = [
 const validateUpdate = [
   check("id")
     .isMongoId()
-    .withMessage("Must be a valid MongoID"),
+    .withMessage("Id must be a valid MongoID."),
   check("name")
     .optional({
       checkFalsy: false,
     })
     .not()
     .isEmpty()
-    .isString(),
+      .withMessage("Role name should not be empty.")
+    .isString()
+      .withMessage("Invalid role name."),
   (request, response, next) => {
     validateResult(request, response, next);
   },
@@ -32,7 +35,7 @@ const validateUpdate = [
 const validateDelete = [
   check("id")
     .isMongoId()
-    .withMessage("Must be a valid MongoID"),
+    .withMessage("Id must be a valid MongoID."),
   (request, response, next) => {
     validateResult(request, response, next);
   },

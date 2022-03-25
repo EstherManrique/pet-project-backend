@@ -6,35 +6,44 @@ const validateSave = [
     .exists()
     .not()
     .isEmpty()
+      .withMessage("Name should not be empty.")
     .isString()
-    .withMessage('Error name'),
+      .withMessage("Invalid name."),
   check("userName")
     .exists()
     .not()
     .isEmpty()
-    .matches(/^([a-zñA-ZÑ\_0-9]{5,})$/, 'g')
-    .withMessage('Error userName at least 5 characters'),
+      .withMessage("Username should not be empty.")
+    .matches(/^([a-zñA-ZÑ\.\_0-9]{5,})$/, 'g')
+      .withMessage('Error username structure, allowed characters: a-z, ., _, numbers'),
   check("email")
+    .exists()
+    .not()
+    .isEmpty()
+      .withMessage("User email should not be empty.")
     .isString()
+      .withMessage("Invalid email.")
     .isEmail()
-    .withMessage('Must be a valid email'),
+      .withMessage('Must be a valid email.'),
   check("password")
     .exists()
     .not()
     .isEmpty()
+      .withMessage("Password should not be empty.")
     .isStrongPassword()
-    .withMessage('Must be a strong passwor'),
+      .withMessage('Must be a strong password.'),
   check("roles")
     .optional({
-      checkFalsy: false
-    })
-    .isArray(),
-  check('storeId')
-    .optional({
-      checkFalsy: false
+      checkFalsy: true
     })
     .isMongoId()
-    .withMessage("Must be a valid MongoID"),
+      .withMessage("Role must be a valid MongoID."),
+  check('storeId')
+    .optional({
+      checkFalsy: true
+    })
+    .isMongoId()
+      .withMessage("StoreId must be a valid MongoID."),
   (request, response, next) => {
     validateResult(request, response, next);
   }  
@@ -43,49 +52,59 @@ const validateSave = [
 const validateUpdate = [
   check('id')
     .isMongoId()
-    .withMessage("Must be a valid MongoID"),
+    .withMessage("Id must be a valid MongoID."),
   check("name")
     .optional({
-      checkFalsy: false
+      checkFalsy: true
     })
     .not()
     .isEmpty()
-    .isString(),
+      .withMessage("Name should not be empty.")
+    .isString()
+      .withMessage("Invalid name."),
   check("userName")
     .optional({
-      checkFalsy: false
+      checkFalsy: true
     })
     .not()
     .isEmpty()
-    .isString()
-    .matches(/^([a-zñA-ZÑ\_0-9]{5,})$/, 'g')
-    .withMessage('Error manger userName at least 5 characters'),
+      .withMessage("Username should not be empty.")
+    .matches(/^([a-zñA-ZÑ\.\_0-9]{5,})$/, 'g')
+      .withMessage('Error username structure, allowed characters: a-z, ., _, numbers'),
   check("email")
     .optional({
       checkFalsy: true
     })
+    .exists()
+    .not()
+    .isEmpty()
+      .withMessage("User email should not be empty.")
     .isString()
-    .isEmail(),
+      .withMessage("Invalid email.")
+    .isEmail()
+      .withMessage('Must be a valid email.'),
   check("password")
     .optional({
-      checkFalsy: false
+      checkFalsy: true
     })
     .exists()
     .not()
     .isEmpty()
+      .withMessage("Password should not be empty.")
     .isStrongPassword()
-    .withMessage('Must be a strong password'),
+      .withMessage('Must be a strong password.'),
   check("roles")
     .optional({
-      checkFalsy: false
-    })
-    .isArray(),
-  check('storeId')
-    .optional({
-      checkFalsy: false
+      checkFalsy: true
     })
     .isMongoId()
-    .withMessage("Must be a valid MongoID"),
+      .withMessage("Role must be a valid MongoID."),
+  check('storeId')
+    .optional({
+      checkFalsy: true
+    })
+    .isMongoId()
+      .withMessage("StoreId must be a valid MongoID."),
   (request, response, next) => {
     validateResult(request, response, next);
   }  
@@ -94,10 +113,32 @@ const validateUpdate = [
 const validateDelete = [
   check('id')
     .isMongoId()
-    .withMessage('Must be a valid MongoID'),
+    .withMessage('Id must be a valid MongoID.'),
   (request, response, next) => {
     validateResult(request, response, next);
   }  
 ];
 
-module.exports = { validateSave, validateUpdate, validateDelete };
+const validateLogin = [
+  check("email")
+    .exists()
+    .not()
+    .isEmpty()
+      .withMessage("User email should not be empty.")
+    .isString()
+      .withMessage("Invalid email.")
+    .isEmail()
+      .withMessage('Must be a valid email.'), 
+  check("password")
+    .exists()
+    .not()
+    .isEmpty()
+      .withMessage("Password should not be empty.")
+    .isStrongPassword()
+      .withMessage('Must be a strong password.'),
+  (request, response, next) => {
+    validateResult(request, response, next);
+  }  
+];
+
+module.exports = { validateSave, validateUpdate, validateDelete, validateLogin };

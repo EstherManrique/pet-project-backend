@@ -6,21 +6,23 @@ const validateSave = [
     .exists()
     .not()
     .isEmpty()
+      .withMessage("Service name should not be empty.")
     .isString()
-    .withMessage('Error service name'),
+      .withMessage("Invalid service name."),
   check("description")
     .exists()
     .not()
     .isEmpty()
+      .withMessage("Description name should not be empty.")
     .isString()
-    .withMessage('Error service description'),
+      .withMessage("Invalid service description."),
   check("price")
     .exists()
     .not()
     .isEmpty()
-    .withMessage('Should not be empty')
+      .withMessage('Price should not be empty.')
     .isCurrency()
-    .withMessage('Must be a valid Currency'),
+      .withMessage('Price must be a valid currency.'),
   (request, response, next) => {
     validateResult(request, response, next);
   }  
@@ -29,29 +31,34 @@ const validateSave = [
 const validateUpdate = [
   check('id')
     .isMongoId()
-    .withMessage("Must be a valid MongoID"),
+    .withMessage("Id must be a valid MongoID."),
   check("name")
     .optional({
       checkFalsy: false
     })
     .not()
     .isEmpty()
-    .isString(),
+      .withMessage("Service name should not be empty.")
+    .isString()
+      .withMessage("Invalid service name."),
   check("description")
     .optional({
       checkFalsy: false
     })
     .not()
     .isEmpty()
-    .isString(),
+      .withMessage("Description name should not be empty.")
+    .isString()
+      .withMessage("Invalid service description."),
   check("price")
     .optional({
       checkFalsy: false
     })
     .not()
     .isEmpty()
+      .withMessage('Price should not be empty.')
     .isCurrency()
-    .withMessage('Must be a valid Currency'),
+      .withMessage('Price must be a valid currency.'),
   (request, response, next) => {
     validateResult(request, response, next);
   }  
@@ -60,13 +67,10 @@ const validateUpdate = [
 const validateDelete = [
   check('id')
     .isMongoId()
-    .withMessage('Must be a valid MongoID'),
+    .withMessage('Id must be a valid MongoID.'),
   (request, response, next) => {
     validateResult(request, response, next);
   }  
 ];
-
-
-
 
 module.exports = { validateSave, validateUpdate, validateDelete };
