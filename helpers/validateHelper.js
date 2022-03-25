@@ -1,4 +1,15 @@
+const { validationResult } = require("express-validator");
 const Role = require('../models/roleModel');
+
+const validateResult = (request, response, next) => {
+  try {
+    validationResult(request).throw();
+    return next();
+  } catch (error) {
+    response.status(400);
+    response.send({ error: error.array() });
+  }
+};
 
 // Find roles matching given roles names
 const getMongoRoles = (roles) => {
@@ -17,4 +28,4 @@ const compareRoles = (allowedRoles, userRole) => {
   return match;
 }
 
-module.exports = { compareRoles, getMongoRoles };
+module.exports = { compareRoles, getMongoRoles, validateResult };
